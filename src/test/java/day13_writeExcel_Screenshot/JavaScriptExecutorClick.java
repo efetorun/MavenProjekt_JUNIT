@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import utilities.ReusableMethods;
 import utilities.TestBase;
 
 public class JavaScriptExecutorClick extends TestBase {
@@ -18,6 +19,9 @@ public class JavaScriptExecutorClick extends TestBase {
     //JavaScriptExecutor ile click yapmak icin
     JavascriptExecutor jsExecutor=(JavascriptExecutor) driver;
     jsExecutor.executeScript("arguments[0].click();",sellLink);
+
+    jsExecutor.executeScript("alert('Bu is bu kadar')");
+    ReusableMethods.wait(4);
 
 
 
